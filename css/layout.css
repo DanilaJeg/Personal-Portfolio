@@ -1,0 +1,214 @@
+* { /*Sets font to be the same all round*/
+	text-align: center;
+	font-family: 'Unbounded', sans-serif;
+}
+
+html,body{
+    margin:0;
+    padding:0;
+    background-color: #0b0b0d;
+    color: #cec9c9;
+    scroll-behavior: smooth; /*Makes scrolling smooth instead of jumpy*/
+}
+
+.container-content{
+	padding-top: 7px;
+}
+
+.page-nav {
+    position: sticky; /*Allows navbar to stay on top of the screen*/
+    top: 0;
+    bottom: 0;
+}
+
+.page-nav ul { /*Changes the style of the list*/
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #010101;
+    display: flex;
+    justify-content: center; 
+}
+
+.page-nav li { /*Makes contents of list in line*/
+	display: inline;
+}
+
+.page-nav li a { /*styling for all the text within the nav bar*/
+	background-color: #020202;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 25px 20px;
+    text-decoration: none;
+    border-bottom: 2px solid #101010;
+    padding-bottom: 20px;
+}
+
+.page-nav li a:hover { /*When hovering of the mouse border of the bottom lights up to a lighter colour same with background*/
+  border-bottom: 2px solid white;
+  padding-bottom: 20px;
+  background-color: #0a0a0a;
+}
+
+@media(max-width:640px){ /*Formatting for mobile phones*/
+	.page-nav {
+    	text-align: center;
+    	position: relative;
+    	top: 0;
+    }
+
+	.page-nav {
+		flex-direction: coulmn;
+	}
+
+	nav ul {
+    	flex-direction: column;
+	}
+
+	nav li {
+		margin: 0.8em 0;
+	}
+
+}
+
+
+
+.header-content, h2{
+	font-size: 3.5vw;
+	font-family: 'Righteous', sans-serif;
+}
+
+
+/*about me*/
+
+.container-content{
+	display: flex;
+	flex-direction: column;
+}
+
+.about-me{
+	align-self: center;
+	width: 550px;
+	padding: 20px;
+	background-color: #151515;
+	border-radius: 10px;
+	box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+/*Work experience css*/
+.container-content h2{
+	font-size: 3.5vw;
+	padding-top: 7.5px;
+
+}
+
+
+.jobs { /* Makes the display of the row and automatically creates an equal space between contents to fit on screen horizzontaly */
+	display: flex;
+	overflow: hidden;
+	justify-content: space-between; /*This allows for the automattic spacing*/
+	padding:20px 70px;
+	background-color: #151515;
+}
+
+.job {
+	width: 28vw; /*This is just formatting the size of the text and stuff like that*/
+	height: auto;
+	overflow: hidden;
+}
+
+/*Images Css i used the same method for styling the image gallary*/
+
+.an-image {
+	width: 28vw;
+	border-radius: 10px;
+	max-height: 300px;
+	overflow: hidden;
+}
+
+.image-row {
+	display: flex;
+	overflow: hidden;
+	justify-content: space-between;
+	padding: 20px 70px;
+	background-color: #151515;
+}
+
+
+footer {
+	height: 100px;
+	width: 100%;
+	background-color: black;
+}
+
+/*Form styling*/
+.container-form {
+    background-color: #151515;
+    padding: 20px;
+    padding-bottom: 3px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3); /*Sets a showdow for the container*/
+    max-width: 350px;
+    width: 100%;
+}
+
+
+.form-group {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+label {
+    display: block; /* Display labels as block elements*/
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: white;
+}
+
+input, textarea {
+    width: calc(100% - 20px); /*Found this piece online it basically calculates the width of container taking away 20px*/
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #1a1a1a;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+    color: white;
+}
+
+input:focus, textarea:focus { /*Styling the text areas when clicked on and ready to type*/
+    outline: none;
+    background-color: #252525;
+    color: white;
+}
+
+.submit{ /*Submit button stylin*/
+	background-color: #ff1f1f;
+	color:white;
+}
+
+.submit:hover{ /*Cursor hovering effects*/
+	cursor:pointer;
+	background-color: #ff0000;
+}
+
+.container-form-iframe {
+	display:inline-flex; /*Holds the form and iframe in one conatiner and allowing them to be side by side*/
+	margin: 100px;
+}
+
+iframe {
+	border-radius: 20px;
+	width: 50vw;
+	margin: 50px;
+}
+
+@media(max-width:680px){
+	iframe{
+		display:none;
+	}
+	.container-form{
+		width:80vw;
+	}
+}
